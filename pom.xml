@@ -15,7 +15,7 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java.version>16</java.version>
+        <java.version>15</java.version>
         <git.commit.plugin.version>4.0.0</git.commit.plugin.version>
         <maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
     </properties>
@@ -145,6 +145,14 @@
                         <includeOnlyProperty>git.build.version</includeOnlyProperty>
                         <includeOnlyProperty>git.branch</includeOnlyProperty>
                     </includeOnlyProperties>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>15</source>
+                    <target>15</target>
                 </configuration>
             </plugin>
         </plugins>

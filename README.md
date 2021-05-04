@@ -1,4 +1,4 @@
-#java-kubernets-dio
+#java-kubernetes-dio
 
 Projeto para estudo do Kubernetes,Docker, Minikube e Kubectl.
 

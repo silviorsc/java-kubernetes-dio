@@ -1,4 +1,21 @@
-Projeto para estudo do Kubernets utilizando Docker e Minikube
+#java-kubernets-dio
+
+Projeto para estudo do Kubernetes,Docker, Minikube e Kubectl.
+
+O projeto original foi dividido em 4 partes, descrito no passo a passo.  
+
+    1 - Roda aplicação local e banco de dados no docker
+    2 - Aplicação java e banco de dados no Docker
+    3 - Criação do cluster Kubernetes local com o container docker 
+    4 - Debbug da aplicação
+
+O projeto tem o seguinte setup:
+
+    -Docker - empacotamento da aplicação no container
+    -Minikube - simulação de um cluster kubernets local
+    -Kubectl - linha de comando pra interagir com o cluster
+    -GNU make(opcional) - Automatizar tarefas(execução dos comandos)
+    Os comandos estão diponíveis no arquivo Makefile.
 
 # Java and Kubernetes
 
@@ -6,8 +23,8 @@ Show how you can move your spring boot application to docker and kubernetes.
 This project is a demo for the series of posts on dev.to
 https://dev.to/sandrogiacom/kubernetes-for-java-developers-setup-41nk
 
-## Part one - base app:
 
+![](images/parte1.png)
 ### Requirements:
 
 **Docker and Make (Optional)**
@@ -49,7 +66,8 @@ http://localhost:8080/app/users
 
 http://localhost:8080/app/hello
 
-## Part two - app on Docker:
+
+![](images/parte2.png)
 
 Create a Dockerfile:
 
@@ -90,14 +108,15 @@ Stop all:
 docker stop mysql57 myapp
 `
 
-## Part three - app on Kubernetes:
 
+![](images/parte3.png)
 We have an application and image running in docker
 Now, we deploy application in a kubernetes cluster running in our machine
 
 Prepare
 
 ### Start minikube
+![](images/parte4.png)
 `
 make k-setup
 `
